@@ -19,19 +19,22 @@
   <meta name="author" content="Tracer">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://wonder7racer.github.io/about/index.html">
+    <meta name="description" content="Run XV6 on Apple SiliconSetup of the experimental environmentThis experiment uses a MacOS system based on the ARM architecture, so the first step is to build a RISC-V-based xv6 experimental environmen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Run XV6 on Apple Silicon">
+<meta property="og:url" content="https://wonder7racer.github.io/2024/08/28/Run-XV6-on-Apple-Silicon/index.html">
 <meta property="og:site_name" content="Tracer">
+<meta property="og:description" content="Run XV6 on Apple SiliconSetup of the experimental environmentThis experiment uses a MacOS system based on the ARM architecture, so the first step is to build a RISC-V-based xv6 experimental environmen">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-28T02:34:07.000Z">
-<meta property="article:modified_time" content="2024-08-28T03:31:58.347Z">
+<meta property="article:published_time" content="2024-08-28T06:20:06.000Z">
+<meta property="article:modified_time" content="2024-08-28T06:50:46.309Z">
 <meta property="article:author" content="Tracer">
+<meta property="article:tag" content="Operating System">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>About - Tracer</title>
+  <title>Run XV6 on Apple Silicon - Tracer</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -91,7 +94,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -197,9 +200,49 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="About"></span>
+            <span id="subtitle" data-typed-text="Run XV6 on Apple Silicon"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-08-28 14:20" pubdate>
+          August 28, 2024 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          66 words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          1 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -215,49 +258,150 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-            <div class="about-avatar">
-              <img src="/img/WechatIMG22.jpg" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center">
-  <div class="about-info">
-    <div class="about-name">Tracer</div>
-    <div class="about-intro">WHUer majoring in CS</div>
-    <div class="about-icons">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        
-        
-        
-        <a href=https://github.com class="
-           hint--bottom hint--rounded"
-           aria-label="GitHub"
-           target="_blank"
-        >
-          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
-          
-        </a>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Run XV6 on Apple Silicon</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Run-XV6-on-Apple-Silicon"><a href="#Run-XV6-on-Apple-Silicon" class="headerlink" title="Run XV6 on Apple Silicon"></a>Run XV6 on Apple Silicon</h1><h2 id="Setup-of-the-experimental-environment"><a href="#Setup-of-the-experimental-environment" class="headerlink" title="Setup of the experimental environment"></a>Setup of the experimental environment</h2><p>This experiment uses a MacOS system based on the ARM architecture, so the first step is to build a RISC-V-based xv6 experimental environment, and use cross-compilation technology and simulator to simulate the RISC-V environment. Be prepared for subsequent modifications and compilation of XV6 code.</p>
+<h3 id="Install-a-toolchain-capable-of-compiling-RISC-V-object-code"><a href="#Install-a-toolchain-capable-of-compiling-RISC-V-object-code" class="headerlink" title="Install a toolchain capable of compiling RISC-V object code"></a>Install a toolchain capable of compiling RISC-V object code</h3><p>On MacOS, I used the homebrew package manager to install it, and the command is as follows：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew tap riscv/riscv<br>brew install riscv-tools<br></code></pre></td></tr></table></figure>
+
+<p>After installing the toolchain, you need to add it to the environment variables, which can be implemented with the following command:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-title class_">PATH</span>=<span class="hljs-variable">$PATH</span><span class="hljs-symbol">:/usr/local/opt/riscv-gnu-toolchain/bin</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Install-the-QEMU-simulator"><a href="#Install-the-QEMU-simulator" class="headerlink" title="Install the QEMU simulator"></a>Install the QEMU simulator</h3><p>QEMU is a general-purpose and open-source machine emulation and virtualizer. It can emulate multiple hardware platforms, enabling users to run operating systems and programs of other architectures on one computer architecture. In this lab, we need to install a QEMU version that supports RISC-V. Install the QEMU emulator we need by entering the following instructions:</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-keyword">brew </span><span class="hljs-keyword">install </span>qemu<br></code></pre></td></tr></table></figure>
+
+<h3 id="Compile-the-XV6-source-code"><a href="#Compile-the-XV6-source-code" class="headerlink" title="Compile the XV6 source code"></a>Compile the XV6 source code</h3><p>In the xv6 source code directory, there is usually a Makefile file that defines how to build the system. A Makefile is a build automation tool that manages and automates the compilation process of a software project. In this step, we need to build xv6 using the make command and the RISC-V toolchain, which will automatically compile the xv6 source code and generate the object and executable files according to the rules and dependencies defined in the makefile. Go to the xv6 directory and run the following command to compile and open QEMU:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-built_in">Make</span><br><span class="hljs-built_in">Make</span> qemu<br></code></pre></td></tr></table></figure>
+<h3 id="Configure-the-debugging-environment-in-the-integrated-development-environment-IDE-CLION"><a href="#Configure-the-debugging-environment-in-the-integrated-development-environment-IDE-CLION" class="headerlink" title="Configure the debugging environment in the integrated development environment (IDE) (CLION)"></a>Configure the debugging environment in the integrated development environment (IDE) (CLION)</h3><p>Since debugging from the command line was too cumbersome and required to configure an IDE to facilitate debugging of code, I chose CLION as the IDE.</p>
+<p>CLion debug xv6 must be configured with riscv-elf-gdb instead of standard GDB, which is designed specifically for the RISC-V architecture and handles the RISC-V instruction set and register configuration correctly, while the standard GDB does not support the RISC-V architecture and therefore cannot properly parse and debug code on the RISC-V platform.</p>
+<p>Use homebrew to download riscv-elf-gdb, then enter make-qemu gdb in the terminal to get the following output, and then configure it according to the displayed port number, the configuration interface is as follows:</p>
+<p>After the configuration is complete, enter the make qemu-gdb command in the terminal and click the debug button in CLION to start debugging.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/Operating-System/" class="print-no-link">#Operating System</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Run XV6 on Apple Silicon</div>
+      <div>https://wonder7racer.github.io/2024/08/28/Run-XV6-on-Apple-Silicon/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Tracer</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>August 28, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/08/27/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
     </div>
   </div>
 </div>
 
-<article class="about-content page-content mt-5">
-  <div class="markdown-body">
-    
-  </div>
-
-  
-</article>
-
 
 
 
@@ -284,11 +428,8 @@
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     
 
     
@@ -381,6 +522,46 @@
   
 
 
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
