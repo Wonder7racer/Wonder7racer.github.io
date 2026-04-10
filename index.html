@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday, My Love</title>
-  <meta name="description" content="一份为北京时间 4 月 11 日 00:00 准备的生日惊喜">
+  <meta name="description" content="写给你的生日惊喜">
   <style>
     :root {
       --bg-0: #040814;
@@ -524,12 +524,14 @@
     .stats {
       margin-top: 32px;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
+      max-width: 34rem;
     }
 
     .stat-card {
       padding: 18px;
+      min-height: 156px;
       border-radius: 18px;
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
@@ -548,8 +550,12 @@
 
     .stat-value {
       margin-top: 10px;
-      font-size: clamp(1.2rem, 2.4vw, 1.9rem);
+      font-size: clamp(1.6rem, 2.4vw, 3rem);
       font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      word-break: keep-all;
+      overflow-wrap: break-word;
     }
 
     .hero-stage {
@@ -1325,42 +1331,42 @@
     <div class="gate-panel">
       <div class="gate-grid">
         <div class="gate-copy">
-          <div class="gate-kicker">Midnight Birthday Sequence</div>
+          <div class="gate-kicker">写给蓝的生日情书</div>
           <h1>
-            <span>倒计时结束时</span>
-            <span>整片银河都会为你亮起</span>
+            <span>当今晚终于来到你身边</span>
+            <span>我想把整片星光都送给你</span>
           </h1>
           <p>
-            这一页会按照北京时间 4 月 11 日 00:00 自动启动生日开场动画。
-            在那一刻之前，所有想说的话和所有想展示的照片，都先藏在这扇门后面，等午夜亲自替我打开。
+            有些喜欢适合慢慢说，也有些心意适合留到最特别的那一刻。
+            所以我想把想念、偏爱和那句写给蓝的生日快乐，都悄悄藏到今晚，再亲手送到你面前。
           </p>
           <div class="gate-actions">
-            <a class="button secondary" href="/blog/">先去博客也可以</a>
+            <button class="button secondary" type="button" id="start-now-button">如果星光迟到了，就由你来点亮</button>
           </div>
         </div>
 
         <div class="countdown-ring" id="countdown-ring">
           <div class="countdown-center">
             <div>
-              <div class="countdown-label" id="gate-label">距离北京时间 4 月 11 日 00:00</div>
+              <div class="countdown-label" id="gate-label">离你的生日更近一点</div>
               <div class="countdown-main" id="gate-main">00:00:00</div>
-              <div class="countdown-sub" id="gate-sub">一过零点，页面会自动点亮 22 张照片和整页庆祝动画。</div>
+              <div class="countdown-sub" id="gate-sub">想把这份喜欢留到最刚好的时刻，再认真对你说一句生日快乐。</div>
               <div class="countdown-grid">
                 <div class="count-unit">
                   <strong id="days-value">00</strong>
-                  <span>Days</span>
+                  <span>天</span>
                 </div>
                 <div class="count-unit">
                   <strong id="hours-value">00</strong>
-                  <span>Hours</span>
+                  <span>时</span>
                 </div>
                 <div class="count-unit">
                   <strong id="minutes-value">00</strong>
-                  <span>Minutes</span>
+                  <span>分</span>
                 </div>
                 <div class="count-unit">
                   <strong id="seconds-value">00</strong>
-                  <span>Seconds</span>
+                  <span>秒</span>
                 </div>
               </div>
             </div>
@@ -1375,46 +1381,45 @@
       <div class="topbar-inner">
         <div class="brand">
           <div class="brand-mark">❤</div>
-          <div>Birthday Broadcast For My Favorite Girl</div>
+          <div>送给最喜欢的你</div>
         </div>
-        <div class="status-chip" id="beijing-status">正在校准北京时间...</div>
+        <div class="status-chip" id="beijing-status">正在把想念调成今晚的时间...</div>
       </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy reveal">
-          <div class="kicker">只属于你的生日首页</div>
+          <div class="kicker">只想把今晚写给你</div>
           <h2>
             <span>所有心动都在排队发光</span>
             <span>今晚我想认真偏爱你</span>
           </h2>
           <p class="lead">
-            我把这份惊喜做成了一个会在午夜自动醒来的页面。
-            到北京时间 4 月 11 日 00:00，它会自己开始播放开场动画，照片墙也会全部被点亮。
-            我想把这一整页的星光、偏爱和告白，都送给正在过生日的你。
+            今晚我想把所有温柔都留给蓝。
+            想把星光、偏爱、想念，还有那些舍不得错过的瞬间，认真排好队，一样一样送到你眼前。
           </p>
           <div class="type-line" id="type-line"></div>
           <div class="hero-actions">
-            <a class="button primary" href="#memories">看 22 张照片位</a>
-            <a class="button secondary" href="/blog/">保留原博客入口</a>
+            <a class="button primary" href="#memories">翻开我们的照片</a>
+            <a class="button secondary" href="/blog/">想看我写的东西也可以</a>
           </div>
           <div class="stats">
             <div class="stat-card">
-              <div class="stat-label">北京时间</div>
+              <div class="stat-label">今晚时刻</div>
               <div class="stat-value" id="beijing-clock">--:--:--</div>
             </div>
             <div class="stat-card">
-              <div class="stat-label">午夜状态</div>
-              <div class="stat-value" id="midnight-status">等待解锁</div>
+              <div class="stat-label">此刻心意</div>
+              <div class="stat-value" id="midnight-status">等你生日快乐</div>
             </div>
             <div class="stat-card">
-              <div class="stat-label">照片位</div>
-              <div class="stat-value">22 Slots</div>
+              <div class="stat-label">心动瞬间</div>
+              <div class="stat-value">22 张</div>
             </div>
             <div class="stat-card">
               <div class="stat-label">今日关键词</div>
-              <div class="stat-value">偏爱你</div>
+              <div class="stat-value">如蓝</div>
             </div>
           </div>
         </div>
@@ -1422,38 +1427,39 @@
         <div class="hero-stage reveal">
           <div class="stage-shell"></div>
           <div class="stage-core"></div>
-          <div class="orbit" id="orbit-gallery" aria-label="午夜旋转画廊"></div>
+          <div class="orbit" id="orbit-gallery" aria-label="生日照片画廊"></div>
         </div>
       </section>
 
       <section class="section">
         <div class="section-head reveal">
           <div>
-            <h3>午夜会启动的开场仪式</h3>
+            <h3>想先把这段话送给蓝</h3>
           </div>
           <p>
-            这个首页不是静态展示。它会先显示倒计时，等到北京时间 4 月 11 日 00:00 自动进入生日模式，
-            触发闪光、粒子喷发、卡片依次亮起和画廊解锁，像正式开演一样。
+            有些喜欢不是突然出现的，而是在很多个平常的日子里，一点一点变得越来越笃定。
+            我想把这样的认真，也一起放进今晚。
           </p>
         </div>
         <div class="timeline reveal">
           <div class="timeline-panel">
             <p>
-              我把这个过程拆成了三段。
-              第一段是倒计时预热，第二段是午夜闪光解锁，第三段是 22 张照片逐张点亮并支持放大查看。
+              你出现之后，很多原本普通的一天都开始有了光。
+              我会因为一句消息开心很久，也会因为想到你，就觉得日子忽然变得柔软。
+              所以今晚我不想只说一句生日快乐，我想把那些没有说完的喜欢，也一起慢慢交给你。
             </p>
             <div class="timeline-badges">
               <div class="timeline-badge">
                 <strong>01</strong>
-                <div>倒计时持续显示北京时间，零点前页面保持仪式感预热。</div>
+                <div>谢谢你来到我身边，让很多时刻都变得值得期待。</div>
               </div>
               <div class="timeline-badge">
                 <strong>02</strong>
-                <div>到点后自动触发整页开场动画，不用手动刷新。</div>
+                <div>如果偏爱可以被看见，那我希望你能一直感受到它落在你身上。</div>
               </div>
               <div class="timeline-badge">
                 <strong>03</strong>
-                <div>22 张照片位已全部预留，后面你只要替换数组里的图片路径即可。</div>
+                <div>希望新的一岁，你被鲜花、好运、掌声和很多很多温柔包围。</div>
               </div>
             </div>
           </div>
@@ -1462,7 +1468,7 @@
             <div class="timeline-quote">
               <strong>4 月 11 日 00:00，生日快乐。</strong>
               <p>
-                不止是一句祝福，而是一整页只为你启动的光。
+                不止是一句祝福，而是一整页只为蓝亮起的光。
                 我希望你打开的时候，会感受到这是一个认真被准备过的瞬间。
               </p>
             </div>
@@ -1473,11 +1479,11 @@
       <section class="section" id="memories">
         <div class="section-head reveal">
           <div>
-            <h3>22 张照片的专属展示位</h3>
+            <h3>想把蓝放进 22 个心动瞬间里</h3>
           </div>
           <p>
-            我已经把 22 个位置全部留出来了。现在第 1 到第 3 张先用你站点里已有的图片做示意，
-            其余位置会显示精美占位卡；你后面把真实照片路径填进去，它们就会自动变成对应的展示卡。
+            如果喜欢有形状，那大概就是这些被我认真收藏起来的片段。
+            每一张都很珍贵，每一张都让我想把目光多停留一会儿。
           </p>
         </div>
         <div class="memory-grid" id="memory-grid"></div>
@@ -1486,10 +1492,10 @@
       <section class="section">
         <div class="section-head reveal">
           <div>
-            <h3>写给她的三段话</h3>
+            <h3>写给蓝的三段话</h3>
           </div>
           <p>
-            我保留了更适合首页节奏的告白段落，让页面不是只有“炫”，而是真的有温度。
+            有些话适合慢慢说，所以我把它们放在这里，想让你一边看照片，一边把我的心意收下。
           </p>
         </div>
         <div class="notes">
@@ -1522,8 +1528,8 @@
     </main>
 
     <div class="footer-note reveal">
-      这个首页已经切换成惊喜模式，博客主页保留在 [ <a href="/blog/">/blog/</a> ]。<br>
-      需要替换 22 张照片时，直接修改页面脚本里的 `PHOTO_SLOTS` 数组即可。
+      这一页写给你。<br>
+      如果你愿意，也可以顺着这里去看我平时写下的那些想法：[ <a href="/blog/">继续往前走</a> ]
     </div>
   </div>
 
@@ -1545,34 +1551,34 @@
   <script>
     const PREVIEW_QUERY = new URLSearchParams(window.location.search).get("preview") === "1";
     const PHOTO_SLOTS = [
-      { src: "/img/WechatIMG21.jpg", title: "Slot 01", note: "这一张先用现有图片示意，你可以换成真正想展示的第一张。", layout: "feature tall", hero: true },
-      { src: "/img/WechatIMG22.jpg", title: "Slot 02", note: "这一张适合放半身或近景，也会同步出现在旋转画廊里。", layout: "wide", hero: true },
-      { src: "/img/DancerontheStage.jpg", title: "Slot 03", note: "横图也已经兼容，后续可以直接替换成你们的合照。", layout: "feature", hero: true, landscape: true },
-      { src: "", title: "Slot 04", note: "预留给你们的一次见面。", layout: "tall" },
-      { src: "", title: "Slot 05", note: "预留给一张你特别喜欢的笑。", layout: "" },
-      { src: "", title: "Slot 06", note: "预留给一次并肩的路。", layout: "" },
-      { src: "", title: "Slot 07", note: "预留给节日、烟花或夜景。", layout: "wide" },
-      { src: "", title: "Slot 08", note: "预留给她低头时的一瞬间。", layout: "" },
-      { src: "", title: "Slot 09", note: "预留给你偷偷珍藏的那张。", layout: "feature" },
-      { src: "", title: "Slot 10", note: "预留给你们的一次旅行。", layout: "" },
-      { src: "", title: "Slot 11", note: "预留给她最发光的样子。", layout: "tall" },
-      { src: "", title: "Slot 12", note: "预留给你们最松弛的合照。", layout: "" },
-      { src: "", title: "Slot 13", note: "预留给一次专属纪念日。", layout: "wide" },
-      { src: "", title: "Slot 14", note: "预留给她认真看向镜头的那一眼。", layout: "" },
-      { src: "", title: "Slot 15", note: "预留给某次晚风里的散步。", layout: "feature tall" },
-      { src: "", title: "Slot 16", note: "预留给一张很有氛围感的自拍。", layout: "" },
-      { src: "", title: "Slot 17", note: "预留给某个笑到模糊的瞬间。", layout: "" },
-      { src: "", title: "Slot 18", note: "预留给一张你怎么都舍不得删的照片。", layout: "wide" },
-      { src: "", title: "Slot 19", note: "预留给一次午后阳光。", layout: "" },
-      { src: "", title: "Slot 20", note: "预留给一张你看见就会心软的图。", layout: "" },
-      { src: "", title: "Slot 21", note: "预留给一张只属于你们的画面。", layout: "feature" },
-      { src: "", title: "Slot 22", note: "最后一张，留给生日当天真正想定格的瞬间。", layout: "tall" }
+      { src: encodeURI("/Weixin Image_20260410185644_173_64.jpg"), title: "Moment 01", note: "第一张就该足够惊艳，像你一出现时那样，把整个页面的光都带亮。", layout: "feature", hero: true, landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185645_174_64.jpg"), title: "Moment 02", note: "我想把每一个值得反复回看的瞬间，都认真放进这场生日惊喜里。", layout: "wide", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185646_175_64.jpg"), title: "Moment 03", note: "这一张适合做主角，因为有些心动本来就应该被放在最亮的位置。", layout: "feature tall", hero: true },
+      { src: encodeURI("/Weixin Image_20260410185649_178_64.jpg"), title: "Moment 04", note: "把这一个画面留下来，是因为我知道以后再看，还是会很喜欢。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185650_179_64.jpg"), title: "Moment 05", note: "有些照片不需要解释，只要看见，就会想起那一刻有多温柔。", layout: "wide", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185654_181_64.jpg"), title: "Moment 06", note: "这张像一段被保存下来的呼吸，让人重新回到那个刚刚好的瞬间。", layout: "feature", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185655_182_64.jpg"), title: "Moment 07", note: "有时候连小小的一帧，也足够让整页心意都变得具体。", layout: "tall" },
+      { src: encodeURI("/Weixin Image_20260410185656_183_64.jpg"), title: "Moment 08", note: "我喜欢把你的每一种状态都留下来，因为每一种都很珍贵。", layout: "tall" },
+      { src: encodeURI("/Weixin Image_20260410185657_184_64.jpg"), title: "Moment 09", note: "如果回忆有重量，这一张大概会稳稳落在我很舍不得删掉的那一栏。", layout: "feature", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185658_185_64.jpg"), title: "Moment 10", note: "这一格留给一段静静发光的片段，不喧哗，但特别耐看。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185700_186_64.jpg"), title: "Moment 11", note: "喜欢会让人开始收藏细节，而你值得我认真收藏很多很多次。", layout: "wide", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185701_187_64.jpg"), title: "Moment 12", note: "我想把那些看见就会心软的画面，全部悄悄放在这一页里。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185702_188_64.jpg"), title: "Moment 13", note: "如果某一天我们再回来看，希望还能一眼认出当时的心动。", layout: "wide", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185704_189_64.jpg"), title: "Moment 14", note: "照片会替时间保留证据，而我想保留的是你让一切变好看的能力。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185705_190_64.jpg"), title: "Moment 15", note: "这一张适合被放大，因为喜欢本来就不该被缩得太小。", layout: "feature", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185707_191_64.jpg"), title: "Moment 16", note: "我把它放在这里，是想让这一页的节奏再多一点温柔的停顿。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185708_192_64.jpg"), title: "Moment 17", note: "有些竖图很像心事，安静地站在那里，就已经足够打动人。", layout: "tall" },
+      { src: encodeURI("/Weixin Image_20260410185709_193_64.jpg"), title: "Moment 18", note: "这张像一束被留住的光，适合在午夜真正开始之后被点亮。", layout: "wide", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185711_194_64.jpg"), title: "Moment 19", note: "我很喜欢这种会让人停下来多看两秒的画面，所以一定要留在这里。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185712_195_64.jpg"), title: "Moment 20", note: "如果这一页是告白，那这一张就是我把喜欢认真写下来的证据。", layout: "feature", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185714_196_64.jpg"), title: "Moment 21", note: "接近结尾的位置要留给更耐看的记忆，让惊喜慢慢收束但不降温。", layout: "", landscape: true },
+      { src: encodeURI("/Weixin Image_20260410185715_197_64.jpg"), title: "Moment 22", note: "最后一张放在这里，像最后一句生日快乐，也像我想认真珍藏的收尾。", layout: "feature tall", hero: true }
     ];
 
     const TYPED_MESSAGES = [
-      "零点一到，这一页会自动开始替我说生日快乐。",
-      "22 张照片位都已经留好了，后面只等你把回忆放进去。",
-      "我想把所有偏爱都做成看得见、点得开的样子。"
+      "蓝，生日快乐，愿你永远被爱，也永远自由。",
+      "你负责发光，我负责把所有温柔都慢慢送到你身边。",
+      "我想把喜欢写得再认真一点，刚好写到蓝的名字这里。"
     ];
 
     let gateHidden = false;
@@ -1643,7 +1649,7 @@
         const copy = document.createElement("div");
         copy.className = "memory-card-copy";
         copy.innerHTML = `
-          <div class="memory-slot">Memory ${pad(index + 1)}</div>
+          <div class="memory-slot">瞬间 ${pad(index + 1)}</div>
           <h4>${slot.src ? slot.title : "预留照片位"}</h4>
           <p>${slot.src ? slot.note : `把第 ${pad(index + 1)} 张照片路径填进 PHOTO_SLOTS，这里就会自动展示。`}</p>
         `;
@@ -1692,11 +1698,11 @@
       document.getElementById("beijing-clock").textContent = `${pad(beijing.hour)}:${pad(beijing.minute)}:${pad(beijing.second)}`;
 
       if (isUnlockedNow) {
-        document.getElementById("beijing-status").textContent = `北京时间 ${beijing.year} 年 ${beijing.month} 月 ${beijing.day} 日 ${pad(beijing.hour)}:${pad(beijing.minute)}:${pad(beijing.second)} · 生日模式已启动`;
-        document.getElementById("midnight-status").textContent = "午夜已点亮";
-        document.getElementById("gate-label").textContent = "午夜已经抵达";
+        document.getElementById("beijing-status").textContent = `${beijing.year} 年 ${beijing.month} 月 ${beijing.day} 日 ${pad(beijing.hour)}:${pad(beijing.minute)}:${pad(beijing.second)} · 今晚属于你`;
+        document.getElementById("midnight-status").textContent = "生日快乐";
+        document.getElementById("gate-label").textContent = "此刻刚刚好";
         document.getElementById("gate-main").textContent = "Happy Birthday";
-        document.getElementById("gate-sub").textContent = "所有动画已经解锁，照片墙正在点亮。";
+        document.getElementById("gate-sub").textContent = "把这一整页写给蓝的喜欢、想念和偏爱，都在今晚认真送给你。";
         document.getElementById("days-value").textContent = "00";
         document.getElementById("hours-value").textContent = "00";
         document.getElementById("minutes-value").textContent = "00";
@@ -1714,10 +1720,10 @@
       const seconds = totalSeconds % 60;
       const ratio = target.getHours() === 0 ? 1 - safeDiff / (24 * 60 * 60 * 1000) : 0;
 
-      document.getElementById("beijing-status").textContent = `北京时间 ${beijing.year} 年 ${beijing.month} 月 ${beijing.day} 日 ${pad(beijing.hour)}:${pad(beijing.minute)}:${pad(beijing.second)} · 正在等待 4 月 11 日 00:00`;
-      document.getElementById("midnight-status").textContent = days > 0 ? `${days} 天后解锁` : `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+      document.getElementById("beijing-status").textContent = `${beijing.year} 年 ${beijing.month} 月 ${beijing.day} 日 ${pad(beijing.hour)}:${pad(beijing.minute)}:${pad(beijing.second)} · 想你又多一点`;
+      document.getElementById("midnight-status").textContent = days > 0 ? `还有 ${days} 天` : `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
       document.getElementById("gate-main").textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-      document.getElementById("gate-sub").textContent = `还剩 ${days} 天 ${pad(hours)} 小时 ${pad(minutes)} 分 ${pad(seconds)} 秒，整页午夜动画会自动播放。`;
+      document.getElementById("gate-sub").textContent = `离那句想亲口送给蓝的生日快乐，还剩 ${days} 天 ${pad(hours)} 小时 ${pad(minutes)} 分 ${pad(seconds)} 秒。`;
       document.getElementById("days-value").textContent = pad(days);
       document.getElementById("hours-value").textContent = pad(hours);
       document.getElementById("minutes-value").textContent = pad(minutes);
@@ -1888,6 +1894,17 @@
       setTimeout(() => burst(window.innerWidth * 0.74, window.innerHeight * 0.42, 28), 420);
     }
 
+    function setupStartButton() {
+      const startButton = document.getElementById("start-now-button");
+      if (!startButton) {
+        return;
+      }
+
+      startButton.addEventListener("click", () => {
+        unlockBirthdayMode(true);
+      });
+    }
+
     function setupSky() {
       const canvas = document.getElementById("sky");
       const ctx = canvas.getContext("2d");
@@ -1987,6 +2004,7 @@
     runTypewriter();
     setupReveal();
     setupLightbox();
+    setupStartButton();
     spawnFloatParticles();
     setupSky();
     updateCountdown();
